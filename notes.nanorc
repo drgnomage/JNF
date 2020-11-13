@@ -2,20 +2,20 @@ syntax	note			"\.?note$"
 comment	"#"
 
 # Comments in white
-color	white				"(^|[[:space:]]+)#.*"
+color	white			"(^|[[:blank:]])#.*"
 
 # Headers in bright blue
-color	brightblue		start="([;^\{]|$)"	end=":$"
+color	brightblue		start="(^|[[:blank:]]).*:"	end="$"
 
 # Actions in bright green
-color	brightgreen		start=": "			end="$"
+color	brightgreen		start="	: "			end="$"
 
 # Inputs in bright magenta
-color	brightmagenta	start="(\+|\-|/) "	end="( \+| \-|/|$)"
+color	brightmagenta	start="	(\+|\-|/) "	end="( \+| \-|/|$)"
 
 # Items in bright yellow
-color	brightyellow	start="\* "		end="(\-|\+|\*|$)"
-color	brightwhite		start="\""		end="\""
+color	brightyellow	start="	\* "		end="(\-|\+|\*|$)"
+color	brightred		start="	\""		end="\""
 
 # Filenames in bright white
 color	brightwhite		"((\w+)\.(\w){5}|(\w+)\.(\w){4}|(\w+)\.(\w){3}|(\w+)\.(\w){2}) "

@@ -1,21 +1,36 @@
-syntax	note			"\.?note$"
+syntax	note			"(\.?note$|\.?jnf$)"
 comment	"#"
 
+# New entries in bright cyan
+color	cyan			start="	"			end="$"
+
+# Actions in blue
+color	blue			start="	: "			end="$"
+
+# Removals in magenta
+color	magenta		start="	\- "	end="$"
+
+# Additions in green
+color	green			start="	\+ "	end="$"
+
+# Items in yellow
+color	yellow			start="	\* "		end="$"
+
+# Quoted items in bright red
+color	brightred		start="(^|\ |\	)\""		end="\""
+
 # Comments in white
-color	white			"(^|[[:blank:]])#.*"
-
-# Headers in bright blue
-color	brightblue		start="(^|[[:blank:]]).*:"	end="$"
-
-# Actions in bright green
-color	brightgreen		start="	: "			end="$"
-
-# Inputs in bright magenta
-color	brightmagenta	start="	(\+|\-|/) "	end="( \+| \-|/|$)"
-
-# Items in bright yellow
-color	brightyellow	start="	\* "		end="(\-|\+|\*|$)"
-color	brightred		start="	\""		end="\""
+color	white			start="(^|\ |\	)#\s*\S+" end="$"
 
 # Filenames in bright white
-color	brightwhite		"((\w+)\.(\w){5}|(\w+)\.(\w){4}|(\w+)\.(\w){3}|(\w+)\.(\w){2}) "
+color	brightwhite		"(^|\ |\	)\w+\.((\S){1}|(\S){2}|(\S){3}|(\S){4}|(\S){5})(\ |$|\	)"
+
+# Emails in bright green
+color	brightgreen			"(^|\ |\	)\S+\@\S+\.((\S){1}|(\S){2}|(\S){3}|(\S){4}|(\S){5})(\ |$|\.|\,)"
+
+# Headers in bright blue
+color	brightblue		start="(^|	)\S+\:"	end="$"
+
+# Subheadings in yellow
+color	brightyellow	start=":\S+"	end="$"
+

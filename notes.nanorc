@@ -29,7 +29,7 @@ color	brightwhite		"(^|\ |\	)\w+\.((\S){1}|(\S){2}|(\S){3}|(\S){4}|(\S){5})(\ |$
 color	brightgreen			"(^|\ |\	)\S+\@\S+\.((\S){1}|(\S){2}|(\S){3}|(\S){4}|(\S){5})(\ |$|\.|\,)"
 
 # Headers in bright blue
-color	brightblue		start="(^|	)\S+\:"	end="$"
+color	brightblue		start="(^|  )\S+.*\:"	end="$"
 
 # Subheadings in yellow
 color	brightyellow	start=":\S+"	end="$"
